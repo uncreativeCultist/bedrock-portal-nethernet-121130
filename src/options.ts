@@ -12,7 +12,7 @@ export type Options = {
 }
 
 // Currently supported verson. Note, clients with newer versions can still connect as long as data is in minecraft-data
-export const CURRENT_VERSION = '1.21.124'
+export const CURRENT_VERSION = '1.21.130'
 
 export const defaultOptions = {
   // https://minecraft.wiki/w/Protocol_version#Bedrock_Edition_2
@@ -22,7 +22,7 @@ export const defaultOptions = {
   // client.status to ClientStatus.Initialized after sending the init packet.
   autoInitPlayer: true,
   // If true, do not authenticate with Xbox Live
-  offline: false,
+  offline: true,
   // Milliseconds to wait before aborting connection attempt
   connectTimeout: 9000,
   // server: What compression algorithm to use by default, either `none`, `deflate` or `snappy`
@@ -32,5 +32,5 @@ export const defaultOptions = {
   // server: If true, only compress if a payload is larger than compressionThreshold
   compressionThreshold: 512,
   // server and client: The protocol version to use
-  protocolVersion: 860,
+  protocolVersion: 898,
 }
